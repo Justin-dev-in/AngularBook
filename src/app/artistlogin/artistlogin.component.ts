@@ -41,7 +41,7 @@ export class ArtistloginComponent implements OnInit {
          this.router.navigate(["/artistreg"])
       }
       else{
-        this.router.navigate(["/welcomeartist"])
+        this.router.navigate(["/WelcomeArtist"])
       }
     });
   }

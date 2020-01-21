@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
+import { UserserviceService } from './userservice.service';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     CarouselComponent,
     rougtingComponants,
-    HomeComponent
+    HomeComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ArtistserviceService],
+  providers: [ArtistserviceService,UserserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
