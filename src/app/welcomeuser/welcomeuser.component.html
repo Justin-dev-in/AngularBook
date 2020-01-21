@@ -1,3 +1,4 @@
+
 <!-- Navbar With Logo,Search,category,login & singn up button ,Cart-icon -->
   <!-- navbar height & attribute -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px;">
@@ -33,12 +34,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Artist On bookMyAtrist</a>
       </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" routerLink="/WelcomeUser">Welcome User</a>
-      </li>-->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/WelcomeArtist">Welcome Artist</a>
-      </li>
   </ul>
     <!-- <pre>    <div class="vline"></div></pre> -->
     <!-- navbar cart-icon  -->
@@ -46,20 +41,54 @@
       <button class="close"><i class="fas fa-bell"></i></button>
     </div>
     <!-- navbar login & sign up  button -->
-    <div class="dropdown">
-      <button class="btn btn-login">Log In</button>
-      <div class="dropdown-content">
-        <a class="dropdown-item" routerLink="/Artist_Login">Artist Login</a>
-        <a class="dropdown-item" routerLink="/User_Login">User Login</a>
+    <div>
+        
+        <button class="btn btn-danger">My Account</button>
       </div>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-danger">Sign Up</button>
-      <div class="dropdown-content">
-        <a class="dropdown-item" href="#" routerLink="/Artist_Registration">Artist Registration</a>
-        <a class="dropdown-item" href="#" routerLink="/User_Registration">User Registration</a>
-      </div>
-    </div>
    </div>
 </nav>
+<!-- User login -->
+<form>
+<div class="container">
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Date</label>
+    <input type="text" class="form-control" placeholder="Enter Date" onfocus="(this.type='date')"/>
+  </div>
+  
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Select Artist Type</label>
+    <select class="form-control">
+      <option selected disabled>Select Your category*</option>
+      <option>Anchor/EMCC</option>
+      <option>Singer(Solo)</option>
+      <option>Dancer(Solo)</option>
+      <option>Singer(Group)</option>
+      <option>Dancer(Group)</option>
+      <option>Instrumentalist</option>
+      <option>Live Band</option>
+      <option>Magician</option>
+      <option>Poet</option>
+      <option>Dj</option>
+      <option>Ohter</option>
+    </select>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Price</label>
+    <input type="number" class="form-control" placeholder="Enter Price"/>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    
+    <input type="submit"  class="btn btn-dark btn-block" value="Search">
+  </div>
+</div>
+</div>
+</form>
  
+

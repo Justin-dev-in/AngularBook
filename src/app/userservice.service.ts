@@ -11,7 +11,7 @@ export class UserserviceService {
 
   public registerUser(user)
   {
-      return this.http.post("http://localhost:9090/artistslist",user);
+      return this.http.post("http://localhost:9090/userslist",user);
   }
 
  // private router:Router;

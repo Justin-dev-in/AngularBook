@@ -4,6 +4,8 @@ import { ArtistregitrationComponent } from './artistregitration/artistregitratio
 import { WelcomeArtistComponent } from './welcomeartist/welcomeartist.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { ArtistloginComponent } from './artistlogin/artistlogin.component';
+
+import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -15,7 +17,8 @@ const routes: Routes = [
   {path: 'User_Login',component:UserloginComponent},
   {path: 'Artist_Registration',component:ArtistregitrationComponent},
   {path: 'User_Registration',component:UserregitrationComponent},
-  {path: 'WelcomeArtist',component:WelcomeArtistComponent}
+  {path: 'WelcomeArtist',component:WelcomeArtistComponent},
+  {path: 'WelcomeUser',component:WelcomeuserComponent},
 
 ];
 

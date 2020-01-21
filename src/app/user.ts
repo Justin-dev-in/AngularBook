@@ -2,13 +2,11 @@ export class User{
 
     constructor(
 
+      userName:string,
       userEmail:string,
-	
-       userName:string,
-       
-	     userPhoneNumber:number,
+       userPhoneNumber:number,
+       userPassword:string,
 	     userAdddress:string,
-	     userPassword:string,
 	     userDob:string,
 	    typeOfUser:string,
     )
