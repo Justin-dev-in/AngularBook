@@ -6,8 +6,8 @@ export class Artist{
         artistPassword:string,
         artistPhoneNumber:number,
         artistGenre:string,
-        artistAvailDays:string,
-        artistfees:number,
+       
+       
         artistCertification:string,
         artistExperience:number,
         artistAddress:string,

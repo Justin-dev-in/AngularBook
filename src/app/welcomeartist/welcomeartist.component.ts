@@ -8,7 +8,7 @@ import { Artist } from '../artist';
   styleUrls: ['./welcomeartist.component.css']
 })
 export class WelcomeArtistComponent implements OnInit {
-  artist:Artist=new Artist("","","",0,"","",0,"",0,"","",0,"");
+  artist:Artist=new Artist("","","",0,"","",0,"","",0,"");
    
   constructor(private service:ArtistserviceService) { }
 

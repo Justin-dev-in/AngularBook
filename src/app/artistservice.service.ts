@@ -29,4 +29,10 @@ export class ArtistserviceService {
         return this.http.get("http://localhost:9090//artistslist/"+email);
 
    }  
+
+   public searchArtistByDate(avldate)
+   {
+     console.log(avldate);
+    return this.http.post("http://localhost:9090//searchArtistsBydate",avldate,{responseType:'text'});
+   }
 }

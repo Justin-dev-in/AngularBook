@@ -1,38 +1,40 @@
-<!-- User Registration Form -->
+
+
 <form>
     <div class="container">
+      <h1>{{message}}</h1>
       <div class="row">
          <p class="registration-text">REGISTRATION FORM</p>
       </div>
    </div>
    <div class="container">
      <div class="form-group">
-       <input type="text" class="form-control" placeholder="Name*">
+       <input type="text" class="form-control" [(ngModel)]="user.userName" name="userName" placeholder="Name*">
      </div>
      <div class="form-group">
-       <input type="email" class="form-control" placeholder="Email*">
+       <input type="email" class="form-control" [(ngModel)]="user.userEmail" name="userEmail" placeholder="Email*">
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" placeholder="Contact Number*">
+       <input type="text" class="form-control" [(ngModel)]="user.userPhoneNumber" name="userPhoneNumber" placeholder="Contact Number*">
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" placeholder="Password*">
+       <input type="password" class="form-control" [(ngModel)]="user.userPassword" name="userPassword" placeholder="Password*">
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" placeholder="Confirm Password*">
+       <input type="password" class="form-control"  placeholder="Confirm Password*">
      </div>
      <div class="form-group">
-       <textarea class="form-control" placeholder="Address*"></textarea>
+       <textarea class="form-control" [(ngModel)]="user.userAdddress" name="userAdddress" placeholder="Address*"></textarea>
      </div>
      <div class="row">
        <div class="col-6 form-group">
-         <input type="text" class="form-control" placeholder="Date Of Birth" onfocus="(this.type='date')"/>
+         <input type="text" class="form-control" [(ngModel)]="user.userDob" name="userDob" placeholder="Date Of Birth" onfocus="(this.type='date')"/>
        </div>
        <div class="col-6 form-group">
-         <select class="form-control">
+         <select class="form-control" [(ngModel)]="user.typeOfUser" name="typeOfUser">
            <option selected disabled>Booking Artist For..*</option>
-           <option>Personal</option>
-           <option>Company</option>
+           <option value="Personal">Personal</option>
+           <option value="Company">Company</option>
          </select>
        </div> 
      </div>
@@ -44,8 +46,9 @@
      </div>
      <div class="row">
        <div class="form-group offset-11">
-         <button type="submit" class="btn btn-dark" disabled id="Submit-btn">SUBMIT</button>
+         <button type="submit" class="btn btn-dark" (click)="registerNow()"  id="Submit-btn">SUBMIT</button>
        </div>
      </div>
    </div>
  </form>
+ 

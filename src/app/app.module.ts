@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserserviceService } from './userservice.service';
+import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { UserserviceService } from './userservice.service';
     CarouselComponent,
     rougtingComponants,
     HomeComponent,
+    WelcomeuserComponent,
  
   ],
   imports: [

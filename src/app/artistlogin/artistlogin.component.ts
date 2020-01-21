@@ -10,7 +10,7 @@ import { Artist } from '../artist'
 })
 export class ArtistloginComponent implements OnInit {
 
-  artist:Artist=new Artist("","","",0,"","",0,"",0,"","",0,"");
+  artist:Artist=new Artist("","","",0,"","",0,"","",0,"");
    
    
    
@@ -38,7 +38,7 @@ export class ArtistloginComponent implements OnInit {
      sessionStorage.setItem("artistemail",data)
       if(this.message==="login failed")
       {
-         this.router.navigate(["/artistreg"])
+         this.router.navigate(["/Home"])
       }
       else{
         this.router.navigate(["/WelcomeArtist"])

@@ -1,0 +1,59 @@
+<!-- Navbar With Logo,Search,category,login & singn up button ,Cart-icon -->
+  <!-- navbar height & attribute -->
+ 
+
+    <div>
+        
+        <button class="btn btn-danger">My Account</button>
+      </div>
+
+<!-- User login -->
+<form>
+<div class="container">
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Date</label>
+    <input type="text" class="form-control"  [(ngModel)]="avldate.date" name="avldate.date" placeholder="Enter Date" onfocus="(this.type='date')"/>
+  </div>
+  
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Select Artist Type</label>
+    <select class="form-control" [(ngModel)]="avldate.genre" name="avldate.genre">
+      <option selected disabled>Select Your category*</option>
+      <option>Anchor/EMCC</option>
+      <option>Singer(Solo)</option>
+      <option>Dancer(Solo)</option>
+      <option>Singer(Group)</option>
+      <option>Dancer(Group)</option>
+      <option>Instrumentalist</option>
+      <option>Live Band</option>
+      <option>Magician</option>
+      <option>Poet</option>
+      <option>Dj</option>
+      <option>Comedian</option>
+    </select>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    <label for="ex3">Price</label>
+    <input type="number" class="form-control" [(ngModel)]="avldate.fees" name="avldate.fees"placeholder="Enter Price"/>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-sm-6">
+    
+    <input type="submit"  class="btn btn-dark btn-block" (click)="searchNow()"value="Search">
+  </div>
+</div>
+</div>
+</form>
+ <table>
+     <tr>
+         <td>{{object.artistfees}}</td>
+         <td>{{object.artist.artistEmailID}}</td>
+         
+         </tr>
+     </table>

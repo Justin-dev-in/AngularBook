@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Artist } from '../artist';
+import { ArtistserviceService } from '../artistservice.service';
 
 @Component({
   selector: 'artistregitration',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artistregitration.component.css']
 })
 export class ArtistregitrationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+  artist:Artist=new Artist("","","",0,"","",0,"","",0,"");
+  message:any;
+  
+    constructor(private service:ArtistserviceService) { }
+  
+    ngOnInit() {
+    
+     
+    }
+  
+  
+    public registerNow()
+    {
+        let res=this.service.registerArtist(this.artist)
+        res.subscribe((data)=>this.message=data);
+    }}
