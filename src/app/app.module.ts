@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserserviceService } from './userservice.service';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
+import { ArtistListForUserComponent } from './artist-list-for-user/artist-list-for-user.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
     rougtingComponants,
     HomeComponent,
     WelcomeuserComponent,
+    ArtistListForUserComponent,
  
   ],
   imports: [

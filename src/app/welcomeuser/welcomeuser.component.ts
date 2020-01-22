@@ -23,9 +23,9 @@ export class WelcomeuserComponent implements OnInit {
     
     let resp=this._service.searchArtistByDate(this.avldate);
     resp.subscribe(data=>{
-      this.object=data as string;
-
-      console.log(data);
+      this.message=data;
+      this.router.navigate(["/ArtistListForUser"],{ state: this.message })
+       console.log(this.message);
 
     
     });

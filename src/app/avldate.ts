@@ -6,7 +6,8 @@ export class AvlDate{
 	
        genre:string,
        
-	     fees:number,
+       fees:number
+       
 	  
     )
      {

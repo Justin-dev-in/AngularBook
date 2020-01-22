@@ -22,7 +22,8 @@ export class ArtistserviceService {
 
      console.log(artist);
         return this.http.post("http://localhost:9090/Alogin",artist,{responseType:'text'});
-   }     
+   }   
+     
    public getArtistByEmailId()
    {
        var email=sessionStorage.getItem('artistemail')
@@ -35,4 +36,13 @@ export class ArtistserviceService {
      console.log(avldate);
     return this.http.post("http://localhost:9090//searchArtistsBydate",avldate,{responseType:'text'});
    }
+   public AddArtistDate(fromdate,todate,fees)
+   {
+  
+    
+    var email=sessionStorage.getItem("artistemail");
+    console.log(fromdate,todate,fees,email);
+    return this.http.post("http://localhost:9090//adatelist"+"/"+fromdate+"/"+todate+"/"+fees+"/"+email,{responseType:'text'});
+   }
+
 }
