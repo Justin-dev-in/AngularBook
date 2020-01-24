@@ -24,7 +24,10 @@ export class ArtistregitrationComponent implements OnInit {
     {
         let res=this.service.registerArtist(this.artist)
 
-        res.subscribe((data)=>this.message="Register Successfull");
+        res.subscribe((data)=>this.message=data);
+        alert(" Yayy!!!You are registered");
+        this.router.navigate(["/Home"])
+
     }
    
    

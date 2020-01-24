@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
 import { User } from '../user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'userregitration',
@@ -12,7 +13,7 @@ export class UserregitrationComponent implements OnInit {
   user:User=new User("","",0,"","","","");
   message:any;
   
-    constructor( private service:UserserviceService) { }
+    constructor( private service:UserserviceService,private router:Router) { }
   
     ngOnInit() {
     }
@@ -21,7 +22,9 @@ export class UserregitrationComponent implements OnInit {
     {
       let x=this.service.registerUser(this.user);
       
-      x.subscribe((data)=>this.message="Registered successfully");
+      x.subscribe((data)=>this.message=data);
+      alert(" Yayy!!!You are registered");
+        this.router.navigate(["/Home"])
       
   
     }

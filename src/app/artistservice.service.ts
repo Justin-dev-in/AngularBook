@@ -61,4 +61,10 @@ export class ArtistserviceService {
      return this.http.get("http://localhost:9090/")
    }
 
+
+   public getBookings(email){
+     console.log(email);
+
+     return this.http.get("http://localhost:9090//orderslistbyaemail/"+email)
+   }
 }

@@ -1,0 +1,34 @@
+<div class="container">
+    <div  *ngFor="let o of result">
+     
+    
+        
+     <div class="card offset-3" >
+      <!-- <img src="C:\Users\i3\Desktop\Demo\Artist_card.jpg" class="card-img-top" alt="..."> -->
+       <div class="card-body">
+         <!-- <h6 class="card-title" style="color: red;">{{o.artist.artistName}}</h6> -->
+         <div class="card-text text-primary"><b>Order ID:</b> &nbsp; {{o.orderId}}</div>
+         <div class="card-text text-muted"><b>Order Name:</b> &nbsp;{{o.artist.artistAddress}}<div>
+         <div class="card-text text-muted"><b>OrderDate:</b> &nbsp;{{o.bookedDate}}</div>
+         <div class="card-text text-muted"><b>Order Venue:</b> &nbsp;{{o.venue}}</div>
+         <div class="card-text text-primary"><b>User Name:</b> &nbsp;{{o.user.userName}}</div>
+         <div class="card-text text-muted"><b>User Email:  </b>&nbsp; {{o.user.userEmail}}</div>
+         
+         <!-- <p class="card-text">Amount:{{o.artist.artistFees}}</p> -->
+             
+       </div>
+       
+       <!-- <div class="card-footer">
+         <small class="text-muted"><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span>
+           <span>Verified</span>
+           </small> -->
+       </div>
+     </div>
+    
+ </div>
+ &emsp;&emsp;&emsp;<br>
+</div>     

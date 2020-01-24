@@ -16,7 +16,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BookartistfilterComponent } from './bookartistfilter/bookartistfilter.component';
 import { ArtistavldateComponent } from './artistavldate/artistavldate.component';
 import { ArtistprofileComponent } from './artistprofile/artistprofile.component';
-
+import {ArtistbookingsComponent} from './artistbookings/artistbookings.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/Home',pathMatch:'full'},
@@ -28,8 +28,10 @@ const routes: Routes = [
   {path: 'WelcomeArtist',component:WelcomeArtistComponent,
   children:[  { path: '', component:ArtistprofileComponent },
   { path: 'MyAvlDate', component:ArtistavldateComponent },
-   {path:'My_Profile',component:ArtistprofileComponent}
-]
+   {path:'My_Profile',component:ArtistprofileComponent},
+   {path:'ArtistBookings',component:ArtistbookingsComponent}
+    
+  ]
   },
 
   {path: 'WelcomeUser',component:WelcomeuserComponent,

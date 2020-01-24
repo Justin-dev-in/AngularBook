@@ -22,6 +22,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BookartistfilterComponent } from './bookartistfilter/bookartistfilter.component';
 import { ArtistavldateComponent } from './artistavldate/artistavldate.component';
 import { ArtistprofileComponent } from './artistprofile/artistprofile.component';
+import { ArtistbookingsComponent } from './artistbookings/artistbookings.component';
+import { ApplicationworkingComponent } from './applicationworking/applicationworking.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { ArtistprofileComponent } from './artistprofile/artistprofile.component'
     BookartistfilterComponent,
     ArtistavldateComponent,
     ArtistprofileComponent,
+    ArtistbookingsComponent,
+    ApplicationworkingComponent,
  
   ],
   imports: [

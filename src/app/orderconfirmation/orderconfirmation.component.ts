@@ -34,7 +34,8 @@ export class OrderconfirmationComponent implements OnInit {
       console.log("sdkjfgbjksd"+artistName,artistfees,artistAddress,artistEmailID,venue,timeslot,udate)
       this.service.orderArtist(artistName,artistfees,artistAddress,artistEmailID,venue,timeslot,udate).subscribe((data)=>{
         this.message=data;
-
+      alert(" Yeyy!!!Your Artist Is Booked");
+      this.router.navigate(["/WelcomeUser"])
 
     })
     }
