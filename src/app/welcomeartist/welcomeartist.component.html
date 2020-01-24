@@ -1,5 +1,38 @@
-<p>welcomeartist works!</p>
-<h1>{{artist.artistEmailID}}</h1>
+
+ <div class="sideMenu">
+  <ul class="navbar-nav">
+    <li class="sideMenu-content" >
+      <a routerLink="/WelcomeArtist/My_Profile">
+        <i class="fas fa-user-circle"></i>
+        <span class="text"> Hey {{artist.artistName}}</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="/WelcomeArtist/MyAvlDate">
+        <i class="fas fa-highlighter"></i>
+        <span class="text"> Availability Update</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="#">
+        <i class="fas fa-sticky-note"></i>
+        <span class="text">My Booking</span>
+      </a>
+    </li>
+    <li class="sideMenu-content">
+      <a href="#">
+        <i class="fas fa-sign-out-alt"></i>
+        <span class="text" (click)="LogOutNow()">Logout</span>
+      </a>
+    </li> 
+ </ul>
+     </div>     
+
+  <!--User Opration Menu end  -->
+ 
+ <!-- <userprofilepost></userprofilepost> -->
+ <router-outlet></router-outlet>
+ 
 <!-- <h1>Welcome {{artist.artistName}} </h1>
     <table border="1">
         <tr>
@@ -24,39 +57,4 @@
     
 
 </table>  -->
-<div>
-        
-  <button class="btn btn-danger">My Account</button>
-</div>
-<div>
-        
-  <button class="btn btn-danger" (click)="logoutNow()">Logout</button>
-</div>
-<form>
-    <div class="container">
-    <div class="form-group row">
-      <div class="col-sm-3">
-        <label for="ex3">From</label>
-        <input type="text" class="form-control" placeholder="Enter Date" [(ngModel)]="adddate.fromDate" name="adddate.fromDate" onfocus="(this.type='date')"/>
-      </div>
-      <div class="col-sm-3">
-        <label for="ex3">To</label>
-        <input type="text" class="form-control" placeholder="Enter Date" [(ngModel)]="adddate.toDate" name="adddate.toDate"onfocus="(this.type='date')"/>
-      </div>
-      
-    </div>
-  
-    <div class="form-group row">
-      <div class="col-sm-6">
-        <label for="ex3">Price</label>
-        <input type="number" class="form-control"  [(ngModel)]="adddate.artistfees" name="adddate.artistfees"placeholder="Enter Price"/>
-      </div>
-    </div>
-    <div class="form-group row">
-      <div class="col-sm-6">
-        
-        <input type="submit"  class="btn btn-dark btn-block" (click)="addArtistDate(adddate.fromDate,adddate.toDate,adddate.artistfees)" value="Submit">
-      </div>
-    </div>
-    </div>
-    </form>
+

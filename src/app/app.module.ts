@@ -18,6 +18,10 @@ import { ArtistEqualValidatorDirective } from './shared/artist-equal-validator.d
 import { UserEqualValidatorDirective } from './shared/user-equal-validator.directive';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { BookartistfilterComponent } from './bookartistfilter/bookartistfilter.component';
+import { ArtistavldateComponent } from './artistavldate/artistavldate.component';
+import { ArtistprofileComponent } from './artistprofile/artistprofile.component';
 
 
 @NgModule({
@@ -36,6 +40,10 @@ import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
     UserEqualValidatorDirective,
     AdminloginComponent,
     WelcomeadminComponent,
+    CategoriesComponent,
+    BookartistfilterComponent,
+    ArtistavldateComponent,
+    ArtistprofileComponent,
  
   ],
   imports: [

@@ -1,31 +1,31 @@
 
-<!-- <div *ngFor= "let l of result | async" >
-<div>  {{l.id}}</div>
-</div>  -->
-<!-- <div *ngFor="let item of message|keyvalue">
-    {{item.key}} -{{item.value}}
-</div> -->
-<!-- {{result}} -->
 
-<table border="4">
+ <div class="container">
     
-    <tr *ngFor="let o of result">
-
-        <td> {{o.artist.artistName}}</td>
-     <td> {{o.artistfees}}</td>
-     <td>{{o.artist.artistAddress}}</td>
-     <td>{{o.artist.artistEmailID}}</td>
-     <td><input type="submit" value="Book Now" (click)="sendDetailstoCart(o.artist.artistName,o.artistfees,o.artist.artistAddress,o.artist.artistEmailID)">  
-<!--     
-     <script>
-      
-     </script>   
-     <td ><inpu type="hidden" id="img" value={{o.artist.artistPicture}}> -->
-     <!-- //<img src="{{o.artist.artistPicture}}"/>  -->
-
-    
-         </tr>
-        
-        
+    <div class="row align-center offset-2">
+        <div  *ngFor="let o of result">
      
- </table>
+     <div class="card offset-2" style="max-width: 240px">
+       <img src="C:\Users\i3\Desktop\Demo\Artist_card.jpg" class="card-img-top" alt="...">
+       <div class="card-body">
+         <h6 class="card-title" style="color: red;">{{o.artist.artistName}}</h6>
+         <p class="card-text"><small class="text-muted">{{o.artist.artistAddress}}</small></p>
+         <p class="card-text"><small class="text-muted">{{o.artist.artistGenre}}</small></p>
+         <p class="card-text">{{o.artistfees}}</p>
+         <button type="button" class="btn bg-dark"  (click)="sendDetailstoCart(o.artist.artistName,o.artistfees,o.artist.artistAddress,o.artist.artistEmailID)">Book Now</button>        
+       </div>
+       <div class="card-footer">
+         <small class="text-muted"><span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <span class="fa fa-star"></span>
+           <span>Verified</span>
+           </small>
+       </div>
+     </div>
+    </div>
+    </div>
+</div> 
+
+

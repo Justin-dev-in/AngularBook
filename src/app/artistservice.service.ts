@@ -56,4 +56,9 @@ export class ArtistserviceService {
 
    }
 
+   public artistByCategory(category){
+     console.log(category);
+     return this.http.get("http://localhost:9090/")
+   }
+
 }

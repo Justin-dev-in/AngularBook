@@ -19,11 +19,11 @@ export class WelcomeArtistComponent implements OnInit {
 
   ngOnInit() {
     
-    this.getArtistByIdNow();
+   this.getArtistByIdNow();
   }
 
 
-  message:any;
+   message:any;
   public getArtistByIdNow()
   {
       this.service.getArtistByEmailId()
@@ -31,18 +31,19 @@ export class WelcomeArtistComponent implements OnInit {
         this.artist=data;
  
 
-    //    console.log(this.artists);
-      console.log(this.artist);
-  });
+        console.log(this.artist);
+       console.log(this.artist);
+   });
   
   
-}
-public addArtistDate(fromdate,todate,fees)
-  {
-   this.service.AddArtistDate(fromdate,todate,fees).subscribe((data)=>{
-     this.message=data;
-   }) 
   }
+// public addArtistDate(fromdate,todate,fees)
+//   {
+    
+//    this.service.AddArtistDate(fromdate,todate,fees).subscribe((data)=>{
+//      this.message=data;
+//    }) 
+//   }
 
 
   public logoutNow(){

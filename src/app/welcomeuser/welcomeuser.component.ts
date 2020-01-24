@@ -10,26 +10,13 @@ import { AvlDate } from '../avldate';
 })
 export class WelcomeuserComponent implements OnInit {
 
-  avldate:AvlDate=new AvlDate("","",0,"");
+  
   constructor(private _service:ArtistserviceService,private router :Router) { }
-  object:string;
+  
   message:any;
   ngOnInit() {
   }
 
-
-  public searchNow(udate)
-  {
-    sessionStorage.setItem("userdate",udate);
-    let resp=this._service.searchArtistByDate(this.avldate);
-    resp.subscribe(data=>{
-      this.message=data;
-      this.router.navigate(["/ArtistListForUser"],{ state: this.message })
-       console.log(this.message);
-
-    
-    });
-  }
 
   public LogOutNow(){
 

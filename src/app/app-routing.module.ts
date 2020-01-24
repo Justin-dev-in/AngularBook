@@ -11,7 +11,12 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {OrderconfirmationComponent} from './orderconfirmation/orderconfirmation.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component'
+import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { BookartistfilterComponent } from './bookartistfilter/bookartistfilter.component';
+import { ArtistavldateComponent } from './artistavldate/artistavldate.component';
+import { ArtistprofileComponent } from './artistprofile/artistprofile.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'/Home',pathMatch:'full'},
@@ -20,13 +25,24 @@ const routes: Routes = [
   {path: 'User_Login',component:UserloginComponent},
   {path: 'Artist_Registration',component:ArtistregitrationComponent},
   {path: 'User_Registration',component:UserregitrationComponent},
-  {path: 'WelcomeArtist',component:WelcomeArtistComponent},
-  {path: 'WelcomeUser',component:WelcomeuserComponent},
+  {path: 'WelcomeArtist',component:WelcomeArtistComponent,
+  children:[  { path: '', component:ArtistprofileComponent },
+  { path: 'MyAvlDate', component:ArtistavldateComponent },
+   {path:'My_Profile',component:ArtistprofileComponent}
+]
+  },
+
+  {path: 'WelcomeUser',component:WelcomeuserComponent,
+  children:[  { path: '', component:CategoriesComponent },
+         { path: 'My_Account', component:CategoriesComponent },
+            {path:'Book_Artist_filter',component:BookartistfilterComponent}]
+         },
   {path: 'ArtistListForUser',component:ArtistListForUserComponent},
   {path: 'Test',component:TestComponent}, 
   {path:'OrderConfirmation',component:OrderconfirmationComponent},
   {path:"Admin_Login",component:AdminloginComponent},
   {path:"WelcomeAdmin",component:WelcomeadminComponent},
+  {path:"Categories",component:CategoriesComponent }
 
 ];
 
@@ -38,4 +54,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const rougtingComponants = [ArtistregitrationComponent,UserregitrationComponent,
 UserloginComponent,ArtistloginComponent,WelcomeArtistComponent,WelcomeuserComponent,
-ArtistListForUserComponent,TestComponent,OrderconfirmationComponent,AdminloginComponent,WelcomeadminComponent];
+ArtistListForUserComponent,TestComponent,OrderconfirmationComponent,AdminloginComponent,WelcomeadminComponent,
+CategoriesComponent ];
