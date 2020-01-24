@@ -9,6 +9,17 @@
     font-size: 28px;
     font-weight: lighterss;
 }
-.form-control{
-    font-family: 'Share Tech Mono',monospace;
+
+/* login form for user & artist */
+.form-tip{
+    position: relative;
+    margin-left:27%;
+    text-decoration: none;
+    color:darkgrey;
+    font-size: 16px;
+} 
+.form-tip:hover{
+    text-decoration: none;
+    color:black;
+    
 }

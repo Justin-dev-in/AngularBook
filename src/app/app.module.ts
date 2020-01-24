@@ -11,6 +11,11 @@ import { HomeComponent } from './home/home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserserviceService } from './userservice.service';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
+import { AdminComponent } from './admin/admin.component';
+import { ArtistEqualValidatorDirective } from './shared/artist-equal-validator.directive';
+import { UserEqualValidatorDirective } from './shared/user-equal-validator.directive';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+
 
 
 @NgModule({
@@ -22,6 +27,11 @@ import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
     rougtingComponants,
     HomeComponent,
     WelcomeuserComponent,
+    AdminComponent,
+    ArtistEqualValidatorDirective,
+    UserEqualValidatorDirective,
+    AdminloginComponent,
+    
  
   ],
   imports: [

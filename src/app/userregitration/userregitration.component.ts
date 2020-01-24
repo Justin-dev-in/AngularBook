@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserserviceService } from '../userservice.service';
+import {FormGroup} from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'userregitration',
@@ -15,6 +19,7 @@ message:any;
   constructor( private service:UserserviceService) { }
 
   ngOnInit() {
+
   }
 
   public registerNow()
@@ -26,3 +31,10 @@ message:any;
 
   }
 }
+
+
+
+
+
+
+

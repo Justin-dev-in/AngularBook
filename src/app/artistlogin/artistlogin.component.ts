@@ -10,7 +10,7 @@ import { Artist } from '../artist'
 })
 export class ArtistloginComponent implements OnInit {
 
-  artist:Artist=new Artist("","","",0,"","",0,"",0,"","",0,"");
+  artist:Artist=new Artist("","","",0,"","",0,"","",0,"");
    
    
    

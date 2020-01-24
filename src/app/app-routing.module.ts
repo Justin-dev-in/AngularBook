@@ -8,6 +8,10 @@ import { ArtistloginComponent } from './artistlogin/artistlogin.component';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+
 
 
 const routes: Routes = [
@@ -19,6 +23,9 @@ const routes: Routes = [
   {path: 'User_Registration',component:UserregitrationComponent},
   {path: 'WelcomeArtist',component:WelcomeArtistComponent},
   {path: 'WelcomeUser',component:WelcomeuserComponent},
+  {path:"Admin",component:AdminComponent},
+  {path:"Admin_Login",component:AdminloginComponent},
+  
 
 ];
 

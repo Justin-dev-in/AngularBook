@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserserviceService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router :Router) { }
 
 
   public registerUser(user)
@@ -20,7 +21,11 @@ export class UserserviceService {
 
      console.log(user);
         return this.http.post("http://localhost:9090/Ulogin",user,{responseType:'text'});
-   }     
+   } 
+   
+   
+
+   
    public getArtistByEmailId()
    {
        var email=sessionStorage.getItem('useremail')

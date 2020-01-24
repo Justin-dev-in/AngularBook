@@ -7,5 +7,9 @@
     padding-top: 25px;
     padding-bottom: 40px;
     font-size: 28px;
-    font-weight: lighterss;
+    font-weight: lighter;
+}
+
+.form-control{
+    font-family: 'Share Tech Mono',monospace;
 }

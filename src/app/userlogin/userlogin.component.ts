@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
 import { Router } from '@angular/router';
-import  {User } from '../user'
+import  {User} from '../user';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'userlogin',
   templateUrl: './userlogin.component.html',
@@ -10,7 +11,11 @@ import  {User } from '../user'
 export class UserloginComponent implements OnInit {
 
   user:User=new User("","",0,"","","","");
-  constructor(private _service:UserserviceService,private router :Router) { }
+  
+
+  
+  constructor(private _service:UserserviceService,private router :Router,private http:HttpClient) { }
+  
 
   message:any;
   ngOnInit() {
@@ -33,5 +38,10 @@ export class UserloginComponent implements OnInit {
         this.router.navigate(["/WelcomeUser"])
       }
     });
+
+   
   }
+  
+  
+  
 }
