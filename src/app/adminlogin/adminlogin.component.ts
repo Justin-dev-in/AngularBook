@@ -9,20 +9,24 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent implements OnInit {
 
-  admin:Admin=new Admin("Admin@gmail.com","12345")
+  msg:any;
+  admin=["Admin@gmail.com","12345"];
   constructor(private router :Router) { }
+
 
   ngOnInit() {
   }
 
-  public adminNow()
+  public adminNow(Email,Password)
   {
-    if(this.admin)
+    if(Email==this.admin[0] && Password==this.admin[1])
     {
         this.router.navigate(["/Admin"]);
     }
     else{
-      this.router.navigate(["/Home"])
+
+      this.msg="Enter valid credentials"
+      this.router.navigate(["Admin_Login"])
     }
   }
 

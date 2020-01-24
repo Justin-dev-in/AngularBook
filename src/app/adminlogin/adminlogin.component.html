@@ -1,12 +1,16 @@
 
 <navbar></navbar>
 <form>
+    
     <div class="container">
       <div class="row">
          <p class="registration-text">ADMIN LOGIN</p>
+         
       </div>
+      
       <div class="container">
         <form>
+            
           <div class="form-group col-6 offset-3">
             <input type="email" class="form-control" [(ngModel)]="admin.Email" name="Email" required  placeholder="Email*" id="artist-login-txt" required>
           </div>
@@ -16,9 +20,10 @@
           <div>
             <a href="#" class="form-tip">Forgot Password?</a>
           </div>
+          <div class="form-group col-6 offset-3 alert alert-danger" *ngIf="msg">{{msg}}</div>
           <div class="row">
             <div class="form-group offset-8">
-              <button type="submit" class="btn btn-dark" id="artist-submit-btn" (click)="adminNow()">SUBMIT</button>
+              <button type="submit" class="btn btn-dark" id="admin-submit-btn" (click)="adminNow(admin.Email,admin.Password)">SUBMIT</button>
             </div>
           </div>
         </form>
