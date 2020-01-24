@@ -6,7 +6,9 @@
       </div>
       <div class="container">
         <form>
+          <div class="alert alert-danger form-group col-6 offset-3" *ngIf="msg" >{{ msg }}</div>
           <div class="form-group col-6 offset-3">
+          
             <input type="email" class="form-control"  [(ngModel)]="user.userEmail"  [ngModelOptions]="{standalone:
               true}" name="user.userEmail" placeholder="Email*" id="user-login-txt" required>
           </div>

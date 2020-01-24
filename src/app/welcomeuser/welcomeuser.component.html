@@ -6,7 +6,12 @@
         
         <button class="btn btn-danger">My Account</button>
       </div>
-
+     <div class="form-group row">
+      <div class="col-sm-6">
+        
+        <input type="submit"  class="btn btn-danger" (click)="LogOutNow()"value="Logout">
+      </div>
+    </div>
 <!-- User login -->
 <form>
 <div class="container">
@@ -44,8 +49,15 @@
 </div>
 <div class="form-group row">
   <div class="col-sm-6">
+    <label for="ex3">City</label>
+    <input type="text" class="form-control" [(ngModel)]="avldate.city" name="avldate.city"placeholder="Enter city"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-sm-6">
     
-    <input type="submit"  class="btn btn-dark btn-block" (click)="searchNow()"value="Search">
+    <input type="submit"  class="btn btn-dark btn-block" (click)="searchNow(avldate.date)"value="Search">
   </div>
 </div>
 </div>

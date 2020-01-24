@@ -10,7 +10,7 @@ import { AvlDate } from '../avldate';
 })
 export class WelcomeuserComponent implements OnInit {
 
-  avldate:AvlDate=new AvlDate("","",0);
+  avldate:AvlDate=new AvlDate("","",0,"");
   constructor(private _service:ArtistserviceService,private router :Router) { }
   object:string;
   message:any;
@@ -18,9 +18,9 @@ export class WelcomeuserComponent implements OnInit {
   }
 
 
-  public searchNow()
+  public searchNow(udate)
   {
-    
+    sessionStorage.setItem("userdate",udate);
     let resp=this._service.searchArtistByDate(this.avldate);
     resp.subscribe(data=>{
       this.message=data;
@@ -30,4 +30,13 @@ export class WelcomeuserComponent implements OnInit {
     
     });
   }
-}
+
+  public LogOutNow(){
+
+  
+    sessionStorage.removeItem('useremail');
+  
+    this.router.navigate(["/Home"]);
+    this.message="logout successfull"
+  }
+} 

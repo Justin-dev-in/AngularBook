@@ -1,8 +1,31 @@
-<p>artist-list-for-user works!</p>
 
-<!-- <div *ngFor= "let l of list" >
-<div>  {{l.artistfees}}</div>
+<!-- <div *ngFor= "let l of result | async" >
+<div>  {{l.id}}</div>
+</div>  -->
+<!-- <div *ngFor="let item of message|keyvalue">
+    {{item.key}} -{{item.value}}
 </div> -->
-<h1>{{avl.id}}</h1>
+<!-- {{result}} -->
 
+<table border="4">
+    
+    <tr *ngFor="let o of result">
 
+        <td> {{o.artist.artistName}}</td>
+     <td> {{o.artistfees}}</td>
+     <td>{{o.artist.artistAddress}}</td>
+     <td>{{o.artist.artistEmailID}}</td>
+     <td><input type="submit" value="Book Now" (click)="sendDetailstoCart(o.artist.artistName,o.artistfees,o.artist.artistAddress,o.artist.artistEmailID)">  
+<!--     
+     <script>
+      
+     </script>   
+     <td ><inpu type="hidden" id="img" value={{o.artist.artistPicture}}> -->
+     <!-- //<img src="{{o.artist.artistPicture}}"/>  -->
+
+    
+         </tr>
+        
+        
+     
+ </table>

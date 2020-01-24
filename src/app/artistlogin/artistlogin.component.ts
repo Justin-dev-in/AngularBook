@@ -27,7 +27,8 @@ export class ArtistloginComponent implements OnInit {
   }
 
  
- 
+  msg: string = null;
+  
   public loginNow()
   {
     
@@ -38,7 +39,10 @@ export class ArtistloginComponent implements OnInit {
      sessionStorage.setItem("artistemail",data)
       if(this.message==="login failed")
       {
-         this.router.navigate(["/Home"])
+         this.router.navigate(["/Artist_Login"])
+       
+         this.msg="Enter Valid Username And Password";
+         console.log(this.msg)
       }
       else{
         this.router.navigate(["/WelcomeArtist"])

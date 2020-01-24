@@ -12,6 +12,12 @@ import {HttpClientModule} from '@angular/common/http';
 import { UserserviceService } from './userservice.service';
 import { WelcomeuserComponent } from './welcomeuser/welcomeuser.component';
 import { ArtistListForUserComponent } from './artist-list-for-user/artist-list-for-user.component';
+import { TestComponent } from './test/test.component';
+import { OrderconfirmationComponent } from './orderconfirmation/orderconfirmation.component';
+import { ArtistEqualValidatorDirective } from './shared/artist-equal-validator.directive';
+import { UserEqualValidatorDirective } from './shared/user-equal-validator.directive';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { WelcomeadminComponent } from './welcomeadmin/welcomeadmin.component';
 
 
 @NgModule({
@@ -24,13 +30,20 @@ import { ArtistListForUserComponent } from './artist-list-for-user/artist-list-f
     HomeComponent,
     WelcomeuserComponent,
     ArtistListForUserComponent,
+    TestComponent,
+    OrderconfirmationComponent,
+    ArtistEqualValidatorDirective,
+    UserEqualValidatorDirective,
+    AdminloginComponent,
+    WelcomeadminComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+  
   ],
   providers: [ArtistserviceService,UserserviceService],
   bootstrap: [AppComponent]

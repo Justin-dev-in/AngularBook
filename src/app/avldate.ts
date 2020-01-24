@@ -2,12 +2,12 @@ export class AvlDate{
 
     constructor(
 
-      Date:string,
+      date:string,
 	
        genre:string,
        
-       fees:number
-       
+       fees:number,
+       city:string
 	  
     )
      {

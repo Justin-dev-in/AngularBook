@@ -16,7 +16,7 @@ export class UserloginComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  msg: string = null;
   public loginNow()
   {
     
@@ -27,7 +27,8 @@ export class UserloginComponent implements OnInit {
      sessionStorage.setItem("useremail",data)
       if(this.message==="login failed")
       {
-         this.router.navigate(["/Home"])
+        
+       this.msg="Enter Valid Username And Password";
       }
       else{
         this.router.navigate(["/WelcomeUser"])

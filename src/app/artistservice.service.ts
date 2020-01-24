@@ -45,4 +45,15 @@ export class ArtistserviceService {
     return this.http.post("http://localhost:9090//adatelist"+"/"+fromdate+"/"+todate+"/"+fees+"/"+email,{responseType:'text'});
    }
 
+   public orderArtist(artistName,artistfees,artistAddress,artistEmailID,venue,timeslot,bdate){
+
+     console.log(artistfees,artistAddress,artistEmailID,venue,timeslot,bdate);
+     var uemail=sessionStorage.getItem('useremail')
+     return this.http.post("http://localhost:9090//orderslist/"+bdate+"/"+timeslot+"/"+artistfees+"/"
+     +venue+"/"+artistEmailID+"/"+uemail,{responseType:'text'});
+
+
+
+   }
+
 }
